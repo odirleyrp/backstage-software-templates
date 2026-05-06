@@ -1,4 +1,0 @@
-Olá, teste de backstage
-
-The app's name is: ${{values.app_name}}
-the app's Env is: ${{values.app_env}}
