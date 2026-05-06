@@ -41,6 +41,8 @@ spec:
       name: Publish
       action: publish:github
       input:
+        allowedHosts:
+          - github.com
         description: This is ${{ parameters.component_id }}
         repoUrl: github.com?owner=odirleyrp&repo=${{parameters.component_id}}
         protectDefaultBranch: false
@@ -57,3 +59,4 @@ spec:
     links:
       - title: Repository
         url: ${{ steps['publish'].output.remoteUrl }}
+
