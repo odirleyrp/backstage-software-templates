@@ -48,7 +48,7 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
-          message: 'Updates values.yaml with commit ${{ '${{needs.ci.outputs.commit_id}}' }}'
+          message: 'Updates values.yaml with commit ${{ '${{needs.ci.outputs.commit_id}}' }}' 
 
       - name: Install argocd
         shell: bash
@@ -81,7 +81,7 @@ jobs:
             --dest-namespace ${{values.app_env}} \
             --dest-server https://kubernetes.default.svc \
             --values values-${{values.app_env}}.yaml \
-            --revision master \
+            --revision main \
             --sync-policy manual \
             --sync-option CreateNamespace=true
 
